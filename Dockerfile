@@ -1,4 +1,4 @@
 FROM openjdk:8
-COPY ./target/bestcalculator-1.0-SNAPSHOT.jar ./
+COPY ./target/ScientificCalc-1.0-SNAPSHOT.jar ./
 WORKDIR ./
-CMD ["java","-jar","bestcalculator-1.0-SNAPSHOT.jar"]
+CMD ["java","-jar","ScientificCalc-1.0-SNAPSHOT.jar"]
