@@ -5,5 +5,5 @@
       docker_image:
         name: agamkashyap/scientific_calc
         source: pull
-      var:
+      vars:
         - ansible_python_interpreter: /home/linuxbrew/.linuxbrew/bin/python3
