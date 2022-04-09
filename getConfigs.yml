@@ -1,0 +1,7 @@
+- name: Pull and Run docker image
+  hosts: all
+  tasks:
+    - name: Pull agamkashyap/scientific_calc
+      docker_image:
+        name: agamkashyap/scientific_calc
+        source: pull
