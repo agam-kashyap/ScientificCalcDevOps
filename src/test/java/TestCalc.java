@@ -12,63 +12,63 @@ public class TestCalc {
 
     double delta = 1e-15;
     @Test
-    public void test@sum() {
+    public void t@sum() {
         double expectedValue = 5;
         double actualValue = Calculator.sum(2, 3);
         assertEquals("This should evaluate to 5", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@subtract() {
+    public void t@subtract() {
         double expectedValue = 10;
         double actualValue = Calculator.subtract(15, 5);
         assertEquals("This should evaluate to 10", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@divide() {
+    public void t@divide() {
         double expectedValue = 10;
         double actualValue = Calculator.divide(20, 2);
         assertEquals("This should evaluate to 10", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@multiply() {
+    public void t@multiply() {
         double expectedValue = 100;
         double actualValue = Calculator.multiply(50, 2);
         assertEquals("This should evaluate to 100", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@square() {
+    public void t@square() {
         double expectedValue = 4;
         double actualValue = Calculator.square(2);
         assertEquals("This should evaluate to 4", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@squareRoot() {
+    public void t@squareRoot() {
         double expectedValue = 2;
         double actualValue = Calculator.squareRoot(4);
         assertEquals("This should evaluate to 2", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@Exponent() {
+    public void t@Exponent() {
         double expectedValue = 1000000;
         double actualValue = Calculator.Exponent(100, 3);
         assertEquals("This should evaluate to 1000", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@naturalLogarithm() {
+    public void t@naturalLogarithm() {
         double expectedValue = 2.1972245773362196;
         double actualValue = Calculator.naturalLogarithm(9);
         assertEquals("This should evaluate to 2.1972245773362196", expectedValue, actualValue, delta);
     }
 
     @Test
-    public void test@factorial() {
+    public void t@factorial() {
         double expectedValue = 24;
         double actualValue = Calculator.factorial(4);
         assertEquals("This should evaluate to 24", expectedValue, actualValue, delta);
