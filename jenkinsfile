@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Github Pull') {
+            steps {
+                git branch: 'main', credentialsId: 'agamKashyapGithub', url: 'https://github.com/agam-kashyap/ScientificCalcDevOps'
+            }
+        }
+        stage('Maven build') {
+            steps {
+                script{
+                    sh 'mvn clean install'
+                }
+            }
+        }
+        stage('Docker build') {
+            steps{
+                script {
+                    imageName=docker.build "agamkashyap/scientific_calc"
+                }
+            }
+        }
+        stage('Docker push img') {
+            steps {
+                script{
+                    docker.withRegistry('','agamkashyapDocker'){
+                    imageName.push()
+                    }
+                }    
+            }
+        }
+        stage('ansible pull img') {
+            steps {
+                ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'getConfigs.yml', sudoUser: null
+            }    
+        }
+    }
+}
