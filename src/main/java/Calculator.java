@@ -6,13 +6,13 @@ public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
     public static double sum(double value1, double value2) {
         double ans = value1 + value2;
-        logger.info("RESULT - SUM " + value1 + " " + value2 + " = " + ans);
+        logger.info("SUM " + "Input:"+value1 + "+" + value2 + " - " + ans);
         return ans;
     }
 
     public static double subtract(double value1, double value2) {
         double ans = value1 - value2;
-        logger.info("RESULT - SUBTRACT " + value1 + " " + value2 + " = " + ans);
+        logger.info("SUBTRACT " + "Input:"+value1 + "-" + value2 + " - " + ans);
         return ans;
     }
 
@@ -22,42 +22,42 @@ public class Calculator {
             return -1;
         }
         double ans =  value1 / value2;
-        logger.info("RESULT - DIVIDE " + value1 + " " + value2 + " = " + ans);
+        logger.info("DIVIDE " + "Input:"+value1 + "/" + value2 + " - " + ans);
         return ans;
     }
 
     public static double multiply(double value1, double value2)
     {
         double ans =  value1 * value2;
-        logger.info("RESULT - MULTIPLY " + value1 + " " + value2 + " = " + ans);
+        logger.info("MULTIPLY " + "Input:"+value1 + "*" + value2 + " - " + ans);
         return ans;
     }
 
     public static double square(double value1)
     {
         double ans = value1 * value1;
-        logger.info("RESULT - SQUARE " + value1 + " = " + ans);
+        logger.info("SQUARE " + "Input:"+value1 + " - " + ans);
         return ans;
     }
 
     public static double squareRoot(double value1)
     {
         double ans  = Math.sqrt(value1);
-        logger.info("RESULT - SQUARE ROOT " + value1 + " = " + ans);
+        logger.info("SQUARE ROOT " + "Input:"+value1 + " - " + ans);
         return ans;
     }
 
     public static double Exponent(double value1, double value2)
     {
         double ans =  Math.pow(value1, value2);
-        logger.info("RESULT - EXPONENT " + value1 + " " + value2 + " = " + ans);
+        logger.info("EXPONENT " + "Input:"+value1 + "^" + value2 + " - " + ans);
         return ans;
     }
 
     public static double naturalLogarithm(double value1)
     {
         double ans = Math.log(value1);
-        logger.info("RESULT - NATURAL LOGARITHM " + value1 + " = " + ans);
+        logger.info("NATURAL LOGARITHM " + "Input:"+value1 + " - " + ans);
         return ans;
     }
 
@@ -66,7 +66,7 @@ public class Calculator {
             return 1;
         }
         double ans = value1 * (factorial(value1-1));
-        logger.info("RESULT - FACTORIAL " + value1 + " = " + ans);
+        logger.info("FACTORIAL " + "Input:"+value1 + " - " + ans);
         return ans;
     }
 
