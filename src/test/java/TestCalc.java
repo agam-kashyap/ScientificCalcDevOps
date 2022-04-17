@@ -33,6 +33,13 @@ public class TestCalc {
     }
 
     @Test
+    public void testing_divide_2() {
+        double expectedValue = -1;
+        double actualValue = Calculator.divide(20, 0);
+        assertEquals("This should evaluate to an error: -1", expectedValue, actualValue, delta);
+    }
+
+    @Test
     public void testing_multiply() {
         double expectedValue = 100;
         double actualValue = Calculator.multiply(50, 2);

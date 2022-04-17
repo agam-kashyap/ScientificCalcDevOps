@@ -10,6 +10,7 @@ public class Calculator {
     public static double divide(double value1, double value2) {
         if(value2 == 0) {
             displayError();
+            return -1;
         }
         return value1 / value2;
     }
